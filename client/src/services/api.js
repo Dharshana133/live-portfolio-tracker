@@ -112,3 +112,12 @@ export const transactionService = {
     return res.data;
   },
 };
+
+// AI Advisor Service
+export const aiService = {
+  analyzeStock: async (ticker, query) => {
+    const res = await api.post("/ai/analyze", { ticker, query });
+    return res.data;
+  },
+};
+

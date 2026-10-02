@@ -67,6 +67,7 @@ export function Navbar({ activeTab, setActiveTab, user, onOpenAuth, onLogout, on
       <nav style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
         {[
           { id: "explorer", label: "Stock Explorer", icon: "📊" },
+          { id: "ai_advisor", label: "AI Advisor", icon: "🤖" },
           { id: "nse_catalog", label: "NSE 840+ Catalog", icon: "🇮🇳" },
           { id: "portfolio", label: "My Portfolio", icon: "💼" },
           { id: "watchlist", label: "Watchlist", icon: "⭐" },

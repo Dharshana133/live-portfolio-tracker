@@ -6,6 +6,7 @@ import { StockExplorer } from "./components/StockExplorer";
 import { NseCatalogTab } from "./components/NseCatalogTab";
 import { PortfolioTab } from "./components/PortfolioTab";
 import { WatchlistTab } from "./components/WatchlistTab";
+import { AiAdvisorTab } from "./components/AiAdvisorTab";
 import "./App.css";
 
 export default function App() {
@@ -82,6 +83,14 @@ export default function App() {
         {activeTab === "explorer" && (
           <StockExplorer
             initialTicker={selectedTicker}
+            user={user}
+            onRequireAuth={() => setAuthModalOpen(true)}
+          />
+        )}
+
+        {activeTab === "ai_advisor" && (
+          <AiAdvisorTab
+            onSelectTicker={handleSelectTicker}
             user={user}
             onRequireAuth={() => setAuthModalOpen(true)}
           />
